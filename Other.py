@@ -26,6 +26,6 @@ if wanna_check_relation in ("Yes","yes"):
 
 # if wanna_check_relation in ("Yes","yes","y"):
 #     give_relation()
-# else:
+# else:aa
 #     print ("You don't want to check relation")
 #aaaa
