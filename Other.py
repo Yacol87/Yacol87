@@ -1,7 +1,7 @@
 
-diki = { "Jen" : "Wesoly moczymorda i leń, można zdewastować wątrobę gdy stresu za duzo",
+diki = { "Jen" : "Wesoly moczymorda i leń, można pogadać i połazić",
          "Mlo" : "Wyłysiały mądrala i gadula, mozna w wiele gier popykać",
-         "Jar" : "Nieobecny hipokryta, można... W sumie chuj wie, pewnie nie przyjdzie"}
+         "Jar" : "Nieobecny hipokryta, można... W sumie pewnie nie przyjdzie"}
 
 
 def give_relation():

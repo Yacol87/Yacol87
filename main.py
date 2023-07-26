@@ -1,29 +1,23 @@
-print ("calculator 2022.10.10")
+from flask import Flask, request, jsonify
 
-def calculator():
-    num1 = float(input("Insert first number"))
-    op = input("your operation, using _ + * /")
-    num2 = float(input("Insert second number"))
+app = Flask(__name__)
 
-    if op == "+":
-        result=float(num1+num2)
-        print (result)
-    elif op == "-":
-        result=float(num1-num2)
-        print (result)
-    elif op == "*":
-        result=float(num1*num2)
-        print (result)
-    elif op == "/":
-        result=float(num1/num2)
-        print (result)
-    else:
-        print ("Cannot compute that")
+@app.route("/get-user/<user_id>")
+def get_user(user_id):
+    user_data = {
+        "user_id": user_id,
+        "name": "Jacek",
+        "email": "jacek.buakalala@gmail.com"
+    }
 
-wanna_calc = input("Do you want to calculate something? Say Yes or No")
+    extra = request.args.get("extra")
+    if extra:
+        user_data["extra"] = extra
 
-if wanna_calc in ("Yes","yes","y"):
-    calculator()
-else:
-    print ("You don't want to calculate jest")
+    return jsonify(user_data), 200
 
+if __name__ == "__main__":
+       app.run(debug=True)
+
+#1. Run in terminal python main.py
+# 2. Run in browser http://127.0.0.1:5000/get-user/13?extra=%22hello%22
