@@ -19,10 +19,6 @@ def give_relation():
 
 wanna_check_relation = input("Want to check relation with someone? Yes or No")
 
-if wanna_check_relation in ("Yes","yes"):
-    give_relation()
-
-
 
 # if wanna_check_relation in ("Yes","yes","y"):
 #     give_relation()
