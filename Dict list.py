@@ -25,10 +25,17 @@ print(fruit_list, number_list, boolean_list)
 x1 = 11
 x2= 0
 while x1 < 20:
-    print(number_list[x2], fruit_list[x2])
+    print(number_list[x2], fruit_list[x2], "\n")
     x1 += 3
     x2 +=1
     # print(x1)
+
+print("List of lists with If, daaaaum \n")
+
+list_of_lists = [[[l2 for l2 in range(3)] for i in range(4)] for z in range (5)]
+
+print(list_of_lists)
+
 
 # for x in fruit_list:
 #     print(x)
