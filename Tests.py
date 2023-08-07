@@ -1,5 +1,12 @@
-for x in range(1,8):
-    if x in range (3,6):
-        print("X in 3 6 range")
-    else:
-        print(x)
+cos = "blabla"
+print (cos.upper())
+print (cos.upper()[1])
+
+# for x in range (0,5):
+#     print(cos.upper()[x])
+
+x=0
+
+while x<5:
+    print(cos.upper()[x])
+    x +=1

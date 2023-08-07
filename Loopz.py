@@ -12,11 +12,29 @@
 # else:
 #   print("Finally finished źdźbło!")
 #
-
+lista = []
 
 i  = 3
 while i < 10:
     print(i)
+    lista.append(i)
     i += 2
+    print(lista)
 else:
     print("i is too large" + str(i))
+
+
+
+
+cos = "blabla"
+print (cos.upper())
+print (cos.upper()[1])
+
+# for x in range (0,5):
+#     print(cos.upper()[x])
+
+x=0
+
+while x<5:
+    print(cos.upper()[x])
+    x +=1
