@@ -10,6 +10,16 @@ CODING
 # F2 - jump between issues
 # Ctrl + W - extend selection
 
+LISTS
+# print (list[3:]) - display items after 3rd onwards
+# COMPARE LSITS AND PRINT SEPECIFIC ITEMS
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# b = []
+# for x in a:
+#     if x < 5:
+#         b.append(x)
+# print (b)
+
 CLASSES
 #
 # dump function - shows attributes with values and methods that this object has

@@ -1,12 +1,9 @@
-cos = "blabla"
-print (cos.upper())
-print (cos.upper()[1])
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 
-# for x in range (0,5):
-#     print(cos.upper()[x])
+b = []
 
-x=0
+for x in a:
+    if x < 5:
+        b.append(x)
 
-while x<5:
-    print(cos.upper()[x])
-    x +=1
+print (b)
