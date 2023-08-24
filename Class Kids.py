@@ -8,8 +8,6 @@ class Kid:
         return self.imie
     def podaj_wiek(self):
         return self.wiek
-
-
     def ask(self):
         print("Tataaa, a co toooo?")
 
@@ -27,3 +25,4 @@ lista_dzieci.append(julia.__dict__)
 
 print (lista_dzieci)
 print(type(jan))
+

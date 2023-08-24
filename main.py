@@ -7,7 +7,8 @@ def get_user(user_id):
     user_data = {
         "user_id": user_id,
         "name": "Jacek",
-        "email": "jacek.buakalala@gmail.com"
+        "email": "bukala.jacek@gmail.com",
+        "birth": "13.10.1987"
     }
 
     extra = request.args.get("extra")
@@ -20,4 +21,4 @@ if __name__ == "__main__":
        app.run(debug=True)
 
 #1. Run in terminal python main.py
-# 2. Run in browser http://127.0.0.1:5000/get-user/13?extra=%22hello%22
+#2. Run in browser http://127.0.0.1:5000/get-user/13?extra=%22hello%22

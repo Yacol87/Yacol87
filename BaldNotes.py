@@ -11,6 +11,12 @@ CODING
 # Ctrl + W - extend selection
 
 LISTS
+# List               /Set	           /Tuple
+# Mutable	         /Mutable	       /Immutable
+# Ordered  	         /Unordered        /Ordered
+# Can change items   /Cannot change    /Can change items
+# Can duplicate      /Cannot Duplic    /Can duplicate
+#
 # print (list[3:]) - display items after 3rd onwards
 # COMPARE LSITS AND PRINT SEPECIFIC ITEMS
 # a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
@@ -54,3 +60,13 @@ CLASSES
 # jan.__str__ = <method-wrapper '__str__' of Kid object at 0x0000025F42BA0FD0>
 # jan.__subclasshook__ = <built-in method __subclasshook__ of type object at 0x0000025F42A5BA80>
 # jan.__weakref__ = None
+
+
+FILES
+# "x" - Create - will create a file, returns an error if the file exist
+# "a" - Append - will create a file if the specified file does not exist
+# "w" - Write - will create a file if the specified file does not exist
+# "r" - read from the file
+# contentUsera = input("Co chcesz dopisać do pliku ")
+# f = open("D:\down\myfile.txt", "w")
+# f.write("\n" + contentUsera)
