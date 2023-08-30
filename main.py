@@ -22,3 +22,4 @@ if __name__ == "__main__":
 
 #1. Run in terminal python main.py
 #2. Run in browser http://127.0.0.1:5000/get-user/13?extra=%22hello%22
+
