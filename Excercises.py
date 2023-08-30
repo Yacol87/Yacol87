@@ -10,8 +10,8 @@ page = urlopen(url)
 
 html_bytes = page.read()
 html = html_bytes.decode("utf-8")
-file = open("D:\down\myfile.txt", "w")
-file.write = ("aaa")
+file = open("D:\down\myfile.txt" , "w")
+file.write(html)
 file.close()
 
 print(html)
