@@ -1,3 +1,4 @@
+PERSONAL NOTES AND Way of doing things
 SETUP
 # Settings - Ctrl + Alt + 0
 # Git
