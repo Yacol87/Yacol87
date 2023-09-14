@@ -71,3 +71,47 @@ FILES
 # contentUsera = input("Co chcesz dopisać do pliku ")
 # f = open("D:\down\myfile.txt", "w")
 # f.write("\n" + contentUsera)
+
+
+JSON
+#SORT
+# https://linuxhint.com/sort-json-objects-python/
+
+
+
+
+# Sort Json by keyvalues
+# # Array of JSON Objects
+# products = [{"name": "HDD", "brand": "Samsung", "price": "$100"},
+#             {"name": "Monitor", "brand": "Dell", "price": "$120"},
+#             {"name": "Mouse", "brand": "Logitech", "price": "$10"}]
+#
+# # Print the original data
+# print("The original JSON data:\n{0}".format(products))
+# # Sort the JSON data based on the value of the brand key
+# products.sort(key=lambda x: x["name"])
+#
+# # Print the sorted JSON data
+# print("The sorted JSON data based on the value of the brand:\n{0}".format(products))
+
+# PULL DATA FROM JSON
+# import json
+# data = json.loads('''
+# {
+#     "in_reply_to_screen_name": null,
+#     "user":
+#             {
+#             "id": 6253282,
+#             "id_str": "6253282",
+#             "name": "Carmen Baskauf",
+#             "screen_name": "cbaskauf",
+#             "location": "Hartford, CT"
+#             }
+#         ,
+#     "geo": null,
+#     "coordinates": null
+# }
+# ''')
+# print(data)
+# print(data['user'])
+# print(data['user']['name'])

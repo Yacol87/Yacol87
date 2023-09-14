@@ -22,42 +22,46 @@ print(random_word)
 random_word_letters = []
 guessed_list = []
 
+
 for y in random_word:
     guessed_list.append("_")
 
 for x in random_word:
     random_word_letters.append(x)
 
-print (random_word_letters)
-print (guessed_list)
-
+lenght = len(random_word_letters)
+guess_counter = 0
 
 def play_hangman():
+    global guessed_list
     print("I generated a word with", len(random_word), " letters. Your task is to guess letter by letter.")
     guess = input("Tell me first letter that you'd like to check: ")
     guess_counter = 0
+    bad_counter = 0
     while True:
-        guess_counter+=1
-        if guess_counter==5:
+        if guess_counter == lenght:
             break
 
         if guess in random_word_letters:
-            guess_index = random_word_letters.index(guess)
-            print(guess_index)
-            guessed_list = [sub.replace(random_word_letters[guess_index], guess) for sub in random_word_letters]
+            print("Good guess")
+            guess_index = int(random_word_letters.index(guess))
+            guessed_list[guess_index] = guess
             guess_counter += 1
-
+            print(str(guessed_list))
+            guess = input("Tell me next letter that you'd like to check: ")
+            if guess_counter == lenght:
+                print("that is your final word", guessed_list, "After this many tries", guess_counter)
+                break
 
         else:
             print("you didn't guess the proper letter")
+            bad_counter += 1
+            print("that is your final word", guessed_list, "After this many tries", guess_counter,"You also had this many bad tries: ", bad_counter)
+
             break
 
 
 play_hangman()
-
-print (random_word_letters)
-print (guessed_list)
-
 
 # 30 In this exercise, the task is to write a function that picks a random word from a list of words from the SOWPODS dictionary.
 # Download this file and save it in the same directory as your Python code.
