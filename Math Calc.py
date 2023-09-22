@@ -15,9 +15,9 @@
 
 
 def calculator():
-    num1 = float(input("Insert first number"))
+    num1 = float(input("Insert first number: "))
     op = input("your operation, using _ + * /")
-    num2 = float(input("Insert second number"))
+    num2 = float(input("Insert second number: "))
 
     if op == "+":
         result=float(num1+num2)
