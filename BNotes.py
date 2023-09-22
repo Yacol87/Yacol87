@@ -74,7 +74,7 @@ FILES
 
 
 JSON
-#SORT
+#SORTing
 # https://linuxhint.com/sort-json-objects-python/
 
 
