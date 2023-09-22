@@ -1,0 +1,94 @@
+{
+	"income_tier_1": 100000
+	"cost_tier_1": 90000
+	"traded_items": [
+		{
+			"commodity": "OFFICE SUPPLIES",
+			"sales_closed_date": "2020-03-10",
+			"income_tier_2":20000,
+			"cost_tier_2": 22000,
+			"summary": [
+				{
+					"period": "2019-12",
+					"financials": {
+						"income_tier_3": 12000,
+						"cost_tier_3": 15000
+					}
+				},
+				{
+					"period": "2020-03",
+					"financials": {
+						"income_tier_3": 8000,
+						"cost_tier_3": 7000
+					}
+				}
+			]
+		},
+		{
+			"commodity": "HARDWARE",
+			"sales_closed_date": "2020-03-25",
+			"income_tier_2":40000,
+			"cost_tier_2": 32000,
+			"summary": [
+				{
+					"period": "2019-01",
+					"financials": {
+						"income_tier_3": 25000,
+						"cost_tier_3": 21664
+					}
+				},
+				{
+					"period": "2020-02",
+					"financials": {
+						"income_tier_3": 15000,
+						"cost_tier_3": 10336
+					}
+				}
+			]
+		},
+		{
+			"commodity": "SOFTWARE",
+			"sales_closed_date": "2020-03-19",
+			"income_tier_2":30000,
+			"cost_tier_2": 21000,
+			"summary": [
+				{
+					"period": "2020-01",
+					"financials": {
+						"income_tier_3": 14550,
+						"cost_tier_3": 12125
+					}
+				},
+				{
+					"period": "2020-03",
+					"financials": {
+						"income_tier_3": 15450,
+						"cost_tier_3": 8875
+					}
+				}
+			]
+		},
+		{
+			"commodity": "HUMAN RESOURCES",
+			"sales_closed_date": "2020-03-19",
+			"income_tier_2":10000,
+			"cost_tier_2": 25000,
+			"summary": [
+				{
+					"period": "2020-02",
+					"financials": {
+						"income_tier_3": 7000,
+						"cost_tier_3": 15000
+					}
+				},
+				{
+					"period": "2020-03",
+					"financials": {
+						"income_tier_3": 3000,
+						"cost_tier_3": 1000
+					}
+				}
+			]
+		}
+	]
+}

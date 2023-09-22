@@ -1,20 +1,83 @@
 # https://www.practicepython.org/
 
+# 31 Let’s continue building Hangman. In the game of Hangman, a clue word is given by the program that the player has to guess, letter by letter. The player guesses one letter at a time until the entire word has been guessed. (In the actual game, the player can only guess 6 letters incorrectly before losing).
+#
+# Let’s say the word the player has to guess is “EVAPORATE”.
+# For this exercise, write the logic that asks a player to guess a letter and displays letters in the clue word that were guessed correctly.
+# For now, let the player guess an infinite number of times until they get the entire word.
+# As a bonus, keep track of the letters the player guessed and display a different message if the player tries to guess that letter again.
+# Remember to stop the game when all the letters have been guessed correctly!
+# Don’t worry about choosing a word randomly or keeping track of the number of guesses the player has remaining - we will deal with those in a future exercise.
+
+import random
+
+def get_list_of_words(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        return f.read().splitlines()
+
+words = get_list_of_words('D:\down\myfile.txt')
+
+random_word = random.choice(words)
+print(random_word)
+random_word_letters = []
+guessed_list = []
+
+
+for y in random_word:
+    guessed_list.append("_")
+
+for x in random_word:
+    random_word_letters.append(x)
+
+lenght = len(random_word_letters)
+guess_counter = 0
+
+def play_hangman():
+    global guessed_list
+    print("I generated a word with", len(random_word), " letters. Your task is to guess letter by letter.")
+    guess = input("Tell me first letter that you'd like to check: ")
+    guess_counter = 0
+    bad_counter = 0
+    while True:
+        if guess_counter == lenght:
+            break
+
+        if guess in random_word_letters:
+            print("Good guess")
+            guess_index = int(random_word_letters.index(guess))
+            guessed_list[guess_index] = guess
+            guess_counter += 1
+            print(str(guessed_list))
+            guess = input("Tell me next letter that you'd like to check: ")
+            if guess_counter == lenght:
+                print("that is your final word", guessed_list, "After this many tries", guess_counter)
+                break
+
+        else:
+            print("you didn't guess the proper letter")
+            bad_counter += 1
+            print("that is your final word", guessed_list, "After this many tries", guess_counter,"You also had this many bad tries: ", bad_counter)
+
+            break
+
+
+play_hangman()
+
 # 30 In this exercise, the task is to write a function that picks a random word from a list of words from the SOWPODS dictionary.
 # Download this file and save it in the same directory as your Python code.
 # This file is Peter Norvig’s compilation of the dictionary of words used in professional Scrabble tournaments. Each line in the file contains a single word.
 
-from urllib.request import urlopen
-url = "http://norvig.com/ngrams/sowpods.txt"
-page = urlopen(url)
-
-html_bytes = page.read()
-html = html_bytes.decode("utf-8")
-file = open("D:\down\myfile.txt" , "w")
-file.write(html)
-file.close()
-
-print(html)
+# from urllib.request import urlopen
+# url = "http://norvig.com/ngrams/sowpods.txt"
+# page = urlopen(url)
+#
+# html_bytes = page.read()
+# html = html_bytes.decode("utf-8")
+# file = open("D:\down\myfile.txt" , "w")
+# file.write(html)
+# file.close()
+#
+# print(html)
 
 # #28 Implement a function that takes as input three variables, and returns the largest of the three. Do this without using the Python max() function!
 #
@@ -121,7 +184,7 @@ print(html)
 
 #13 Write a program that asks the user how many Fibonnaci numbers to generate and then generates them.
 # Take this opportunity to think about how you can use functions
-# fibonnaciList = [1,1]
+# fibonnaci = [1,2]
 #
 # numberOfIntegers = int(input("Hello, give me number of Fibonnaci integers to return to you: "))
 # while (len(fibonnaci)< numberOfIntegers):
