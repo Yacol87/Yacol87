@@ -1,4 +1,13 @@
-PERSONAL NOTES AND Way of doing things
+PERSONAL NOTES
+
+LINUX
+ubuntu2004 config --default-user root // set default as root - to be done in CMD
+lsb_release -a // check ubuntu version
+ls > test.txt // write to new test.txt file
+find grep FIND /home/test.txt // find specific text in it
+
+DOCKER
+
 SETUP
 # Settings - Ctrl + Alt + 0
 # Git
