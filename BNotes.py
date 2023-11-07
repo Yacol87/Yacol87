@@ -7,9 +7,12 @@ ls > test.txt // write to new test.txt file
 find grep FIND /home/test.txt // find specific text in it
 
 DOCKER
+docker images
+docker ps -a // all containers
+
 run modgo DB and mongo-express in single Docker network
-docker run -p  27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin --name mongodb --network mongo-network mongo // run default mongo contaier at 27017 port with root user admin / admin
-docker run -p  8081:8081 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin --name mongo-express --network mongo-network -e ME_CONFIG_MONGODB_SERVER=mongodb  mongo-express
+docker run -p  27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo // run default mongo contaier at 27017 port with root user admin / admin
+docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodb  mongo-express
 
 SETUP
 # Settings - Ctrl + Alt + 0
